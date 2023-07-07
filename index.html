@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UEPME|UNIVERSITÉ D'ÉTÉ DES PETITES ET MOYENNES ENTREPRISES </title> <!-- css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" type="image/x-icon" href="favicon%EF%B9%96v=3.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon%EF%B9%96v=3.ico"/>
+</head>
+
+<body data-spy="scroll" data-target="#site-nav">
+    <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- logo -->
+                <div class="site-branding"> <a class="logo" href="index.html">
+                        <!-- logo image   <img src="assets/images/logo.png" alt="Logo">  -->
+                    </a> </div> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div><!-- /.navbar-header -->
+            <div class="collapse navbar-collapse" id="navbar-items">
+            </div>
+        </div><!-- /.container -->
+    </nav>
+    <header id="site-header" class="site-header valign-center">
+        <div class="intro">
+            <h2>20 JUILLET, 2023 / SOFITEL HOTEL IVOIRE</h2>
+            <h1>UNIVERSITÉ D'ÉTÉ DES PETITES ET MOYENNES ENTREPRISES <br> 2ÉME EDITION</h1>
+            <p>#UEPME2023 Conference</p> <a class="btn btn-white" data-scroll href="#registration">INSCRIVEZ VOUS!</a>
+        </div>
+    </header>
+
+
+
+    <section id="registration" class="section registration">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-title">INSCRIPTION &amp; OBTENTION DE BADGE</h3>
+                </div>
+            </div>
+            <form action="https://formspree.io/f/mknlnjrz" method="POST" >
+                <div class="row">
+                    <div class="col-md-12" id="registration-msg" style="display:none;">
+                        <div class="alert"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group"> <input type="text" class="form-control" placeholder="First Name" id="firstName" name="firstName" required> </div>
+                        <div class="form-group"> <input type="text" class="form-control" placeholder="Last Name" id="lastName" name="lastName" required> </div>
+                        <div class="form-group"> <input type="email" class="form-control" placeholder="Email" id="email" name="email" required> </div>
+                        <div class="form-group"> <input type="text" class="form-control" placeholder="Phone" id="phone" name="phone" required> </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group"> <input type="text" class="form-control" placeholder="Address" id="address" name="address" required> </div>
+                        <div class="form-group"> <select class="form-control" name="title" id="title" required>
+                            <option value="PARTICIPANT" readonly>PARTICIPANT</option>
+                            <option value="PRESS">PRESS</option>
+                            <option value="MEDIA">MEDIA</option>
+                            </select> </div>
+                    </div>
+                </div>
+                <div class="text-center mt20"> 
+                     <button type="submit" class="btn btn-black" id="registration-submit-btn">CONFIRMER L'INSCRIPTION</button>
+                     <button type="button" class="btn btn-black" id="badge-submit-btn" onclick="redirectToContactPDF()">OBTENIR UN BADGE</button>  
+                     <script>
+                        function redirectToContactPDF() {
+                          // Retrieve form data
+                          var firstName = document.getElementById("firstName").value;
+                          var lastName = document.getElementById("lastName").value;
+                          var email = document.getElementById("email").value;
+                          var title = document.getElementById("title").value;
+                      
+                          // Store form data in localStorage
+                          localStorage.setItem("firstName", firstName);
+                          localStorage.setItem("lastName", lastName);
+                          localStorage.setItem("email", email);
+                          localStorage.setItem("title", title);
+                      
+                          // Redirect to contactpdf.html
+                          window.location.href = "contactpdf.html";
+                        }
+                      </script>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="social-block">
+                        <li><a href=""><i class="ion-social-twitter"></i></a></li>
+                        <li><a href=""><i class="ion-social-facebook"></i></a></li>
+                        <li><a href=""><i class="ion-social-linkedin-outline"></i></a></li>
+                        <li><a href=""><i class="ion-social-googleplus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> <!-- script -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
